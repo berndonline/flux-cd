@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-kubernetes
+  name: eks
   namespace: default
   annotations:
     fluxcd.io/automated: "true"
@@ -10,11 +10,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: hello-kubernetes
+      app: eks
   template:
     metadata:
       labels:
-        app: hello-kubernetes
+        app: eks
     spec:
       containers:
       - name: hello-kubernetes

@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: common
+  namespace: default
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: common
+  template:
+    metadata:
+      labels:
+        app: common
+    spec:
+      containers:
+      - name: hello-kubernetes
+        image: paulbouwer/hello-kubernetes:1.5
+        ports:
+        - containerPort: 8080
+        env:
+        - name: MESSAGE
+          value: Hello Kubernetes! - common
