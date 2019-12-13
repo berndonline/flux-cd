@@ -9,10 +9,8 @@ metadata:
 spec:
   template:
     spec:
-      $setElementOrder/containers:
-      - name: hello-kubernetes
       containers:
-      - name: hello-kubernetes
+      - name: hello-kubernetes # (1)
         env:
         - name: MESSAGE
           value: Hello Kubernetes! - common stage
