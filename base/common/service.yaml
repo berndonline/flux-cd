@@ -2,8 +2,8 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: gke
-  namespace: default
+  name: common
+  namespace: common
   annotations:
     fluxcd.io/automated: "true"
 spec:
@@ -12,4 +12,4 @@ spec:
   - port: 80
     targetPort: 8080
   selector:
-    app: gke
+    app: common
