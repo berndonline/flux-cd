@@ -11,6 +11,8 @@ spec:
     spec:
       $setElementOrder/containers:
       - name: hello-kubernetes
+      containers:
+      - name: hello-kubernetes
         env:
         - name: MESSAGE
           value: Hello Kubernetes! - common prod
