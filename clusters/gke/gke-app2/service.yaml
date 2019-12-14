@@ -4,8 +4,6 @@ kind: Service
 metadata:
   name: gke2
   namespace: default
-  annotations:
-    fluxcd.io/automated: "true"
 spec:
   type: LoadBalancer
   ports:

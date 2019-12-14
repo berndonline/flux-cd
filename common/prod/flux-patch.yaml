@@ -2,8 +2,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    flux.weave.works/automated: "true"
   name: common
   namespace: default
 spec:

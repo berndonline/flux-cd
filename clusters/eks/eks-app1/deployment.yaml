@@ -2,19 +2,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: eks
+  name: eks1
   namespace: default
-  annotations:
-    fluxcd.io/automated: "true"
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: eks
+      app: eks1
   template:
     metadata:
       labels:
-        app: eks
+        app: eks1
     spec:
       containers:
       - name: hello-kubernetes
@@ -23,4 +21,4 @@ spec:
         - containerPort: 8080
         env:
         - name: MESSAGE
-          value: Hello Kubernetes! - EKS
+          value: Hello Kubernetes! - EKS v1

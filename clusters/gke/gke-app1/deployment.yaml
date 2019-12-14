@@ -4,8 +4,6 @@ kind: Deployment
 metadata:
   name: gke1
   namespace: default
-  annotations:
-    fluxcd.io/automated: "true"
 spec:
   replicas: 1
   selector:
